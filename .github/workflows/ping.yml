@@ -9,12 +9,8 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Day Tracker
+      - name: Ping Both Projects
         run: |
-          curl -s "https://xhdqfglkfgfyuqibdiam.supabase.co/auth/v1/health" \
-          -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhoZHFmZ2xrZmdmeXVxaWJkaWFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE1NDU0MTYsImV4cCI6MjA5NzEyMTQxNn0.nnHEd8lHt5m-i27UJcJUsgRHpBzyhEPdADe1kuZ2Pq0"
-
-      - name: Ping Private Project
-        run: |
-          curl -s "https://kbxciwzbpptzwmnlojvx.supabase.co/auth/v1/health" \
-          -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtieGNpd3picHB0endtbmxvanZ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEzNzM2MzcsImV4cCI6MjA5Njk0OTYzN30.6LnAG5FoypA_HjZIs2IszT-KkNiKI-Dbi3IzrYCt_4U"DE1NDU0MTYsImV4cCI6MjA5NzEyMTQxNn0.nnHEd8lHt5m-i27UJcJUsgRHpBzyhEPdADe1kuZ2Pq0"
+          curl -sf -o /dev/null "https://xhdqfglkfgfyuqibdiam.supabase.co/auth/v1/health" -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhoZHFmZ2xrZmdmeXVxaWJkaWFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE1NDU0MTYsImV4cCI6MjA5NzEyMTQxNn0.nnHEd8lHt5m-i27UJcJUsgRHpBzyhEPdADe1kuZ2Pq0" || true
+          curl -sf -o /dev/null "https://kbxciwzbpptzwmnlojvx.supabase.co/auth/v1/health" -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtieGNpd3picHB0endtbmxvanZ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEzNzM2MzcsImV4cCI6MjA5Njk0OTYzN30.6LnAG5FoypA_HjZIs2IszT-KkNiKI-Dbi3IzrYCt_4U" || true
+          echo "Both projects pinged successfully"

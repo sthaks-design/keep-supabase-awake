@@ -17,9 +17,9 @@ jobs:
 
       - name: Ping Private Project
         run: |
-          curl -s "https://kbxciwzbpptzwmnlojvx.supabase.co/rest/v1/?limit=1" \
+          curl -s "https://kbxciwzbpptzwmnlojvx.supabase.co/auth/v1/settings" \
           -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtieGNpd3picHB0endtbmxvanZ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEzNzM2MzcsImV4cCI6MjA5Njk0OTYzN30.6LnAG5FoypA_HjZIs2IszT-KkNiKI-Dbi3IzrYCt_4U" \
           -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtieGNpd3picHB0endtbmxvanZ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEzNzM2MzcsImV4cCI6MjA5Njk0OTYzN30.6LnAG5FoypA_HjZIs2IszT-KkNiKI-Dbi3IzrYCt_4U" || true
-          
+
       - name: Done
         run: echo "Both projects pinged successfully"
